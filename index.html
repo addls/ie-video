@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <title>VideoJS HLS</title>
+</head>
+
+<body>
+
+<div class="container">
+    <section class="starter-template">
+        <video id="example-video" width=960 height=400 class="video-js vjs-default-skin" controls>
+            <source  src="http://vfile.wuhunews.cn/2017/1503/8885/7151/150388857151.ssm/manifest.m3u8"  type="application/x-mpegURL">
+        </video>
+    </section>
+</div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<link href="css/video.css" rel="stylesheet">
+<script src="js/video.js"></script>
+<script src="js/videojs-flash.js"></script>
+<script src="js/videojs-contrib-hls.js"></script>
+
+<script>
+var player = window.player = videojs('example-video');
+
+player.src({
+    type: 'application/x-mpegURL'
+});
+
+//    }(window, window.videojs));
+</script>
+</body>
+</html>
